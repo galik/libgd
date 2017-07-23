@@ -770,12 +770,12 @@ BGD_DECLARE(void) gdFreeFontCache (void);
 /* Calls gdImageStringFT. Provided for backwards compatibility only. */
 BGD_DECLARE(char *) gdImageStringTTF (gdImage * im, int *brect, int fg, char *fontlist,
                                       double ptsize, double angle, int x, int y,
-                                      char *string);
+                                      const char *string);
 
 /* FreeType 2 text output */
 BGD_DECLARE(char *) gdImageStringFT (gdImage * im, int *brect, int fg, char *fontlist,
                                      double ptsize, double angle, int x, int y,
-                                     char *string);
+                                     const char *string);
 
 
 /*
@@ -859,7 +859,7 @@ BGD_DECLARE(int) gdFTUseFontConfig(int flag);
 
 BGD_DECLARE(char *) gdImageStringFTEx (gdImage * im, int *brect, int fg, char *fontlist,
                                        double ptsize, double angle, int x, int y,
-                                       char *string, gdFTStringExtraPtr strex);
+                                       const char *string, gdFTStringExtraPtr strex);
 
 
 /*
